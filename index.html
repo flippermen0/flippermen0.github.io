@@ -557,6 +557,17 @@
                 // Mostrar un mensaje al usuario o un botón para iniciar la música manualmente
             });
         });
+        function toggleCartita(element) {
+    // Cerrar todas las cartas abiertas
+    document.querySelectorAll('.cartita').forEach(carta => {
+        if (carta !== element && carta.classList.contains('active')) {
+            carta.classList.remove('active');
+        }
+    });
+    
+    // Alternar la clase active en la carta clickeada
+    element.classList.toggle('active');
+}
     </script>
 </body>
 
